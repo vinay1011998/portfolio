@@ -4,7 +4,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const onButtonClick = () => {
-  const fileId = "1CYkWVvmrVx3YTBxIYwOq4Y5IBX_jEmTe";
+  const fileId = "1cI8GOVfQvULeW3p6RatGw3nZ9PkXcKAQ";
   const url = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
   const iframe = document.createElement("iframe");
