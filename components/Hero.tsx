@@ -5,15 +5,13 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const onButtonClick = () => {
   const fileId = "1cI8GOVfQvULeW3p6RatGw3nZ9PkXcKAQ";
-  const url = `https://drive.google.com/uc?export=download&id=${fileId}`;
-
-  const iframe = document.createElement("iframe");
-  iframe.style.display = "none";
-  iframe.src = url;
-  document.body.appendChild(iframe);
-  setTimeout(() => {
-    document.body.removeChild(iframe);
-  }, 2000);
+  const directLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
+  const downloadLink = document.createElement('a');
+  downloadLink.href = directLink;
+  downloadLink.download = "filename.extension"; 
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  document.body.removeChild(downloadLink);
 };
 
 const Hero = () => {
